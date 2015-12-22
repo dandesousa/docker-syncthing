@@ -18,7 +18,7 @@ ENV RELEASE syncthing-linux-amd64-v0.12.9
 
 # Using wget because an ADD step with a URL isn't cached by docker build.
 RUN wget -O /$RELEASE.tar.gz \
-    https://github.com/calmh/syncthing/releases/download/$VERSION/$RELEASE.tar.gz
+    https://github.com/syncthing/syncthing/releases/download/$VERSION/$RELEASE.tar.gz
 RUN tar zxf /$RELEASE.tar.gz -C /usr/local && \
     ln -s /usr/local/$RELEASE/syncthing /usr/local/bin && \
     rm /$RELEASE.tar.gz
